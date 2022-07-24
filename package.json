@@ -17,6 +17,7 @@
     "test": "react-scripts test --watchAll=false",
     "test:watch": "react-scripts test",
     "start": "react-scripts start",
+    "start-another": "PORT=1234 react-scripts start",
     "build": "react-scripts build"
   },
   "browserslist": {

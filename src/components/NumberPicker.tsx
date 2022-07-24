@@ -19,12 +19,14 @@ export default function NumberPicker(): JSX.Element {
       ...storedValuesFromCurrentRender,
       counterValueFromCurrentRender,
     ]);
+    // console.log(storedValuesFromCurrentRender)
   };
-
+    // console.log(storedValuesFromCurrentRender)
   return (
     <>
       <h1>Number picker</h1>
-      <p>Your stored numbers: {storedValuesFromCurrentRender.join(", ")}</p>
+      {/* <p>Your stored numbers: {storedValuesFromCurrentRender.join(", ")}</p> */}
+      <p>Your stored numbers: {storedValuesFromCurrentRender.slice(-5).map((element, idx) =>(<li key={idx}>{element}</li>))}</p>
       <p>Counter: {counterValueFromCurrentRender}</p>
       <button onClick={handleSubtractOneFromCounter}>-1</button>
       <button onClick={handleAddOneToCounter}>+1</button>
@@ -33,3 +35,8 @@ export default function NumberPicker(): JSX.Element {
     </>
   );
 }
+
+
+{/* <p>Your stored numbers: {storedValuesFromCurrentRender.map(element, inx) =>(<li> key={inx}{element}</li>}</p>
+const mappedShoppingListElements = shoppingList.map((item, idx) => (
+  <li key={idx}>{shoppingListItemToString(item)}</li> */}
